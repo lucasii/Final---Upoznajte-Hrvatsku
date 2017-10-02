@@ -1,0 +1,113 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title></title>
+        <link href="https://fonts.googleapis.com/css?family=Domine:400,700" rel="stylesheet">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="height=device-height, initial-scale=1">
+
+    	<link rel="stylesheet" type="text/css" href="Style/style.css">
+
+    	<!-- Google Maps and Places API -->
+    	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/location.js">
+
+
+
+        </script>
+    </head>
+    
+    <body id="location">
+
+        <div id="header">
+            <div id="prijava">
+                <input type="checkbox" name="toggle" id="toggle" class="toggle"/>
+                <label for="toggle" class="menu-icon" >
+                    <img src="Pictures/arrowDown.png" class="arrowDown" onclick="showParameters()">
+                    <img src="Pictures/arrowUp.png" class="arrowUp" onclick="hideParameters()">
+                </label>
+            </div>
+        </div>
+    
+        <div id="middle">
+            <div id="tijeloRecenzije">
+                <div id="recenzije">
+                    <button type="button" id="sakrijRecenziju" onclick="hide('tijeloRecenzije')">X</button>
+                    <div id="sadrzaj"></div>
+                </div>
+            </div>
+
+        	<div id="map-canvas"></div>
+            <div id="mobile-info"></div>
+
+            <div id="search-menu">
+                <div id="search">
+                    <p style="text-align: center; margin-left: -20px;">Što želite naći:</p>
+                    <form action="#" method="POST" id="formaPretrage">
+
+                        <input type="checkbox" id="store" class="markerCheckbox" value="store"/>
+                        <label for="store">Trgovine</label>
+
+                        <input type="checkbox" id="restaurant" class="markerCheckbox" value="restaurant" style="float: right; margin-right: 7%;"/>
+                        <label for="restaurant" style="float: right;">Restorani</label><br>
+
+                        <input type="checkbox" id="museum" class="markerCheckbox" value="museum" />
+                        <label for="museum">Muzeji</label>
+
+                        <input type="checkbox" id="lodging" class="markerCheckbox" value="lodging"style="float: right; margin-right: 7%;"/>
+                        <label for="lodging" style="float: right;">Hoteli</label><br>
+
+                        <input type="checkbox" id="bank" class="markerCheckbox" value="bank"/>
+                        <label for="bank">Banke</label>
+
+                        <input type="checkbox" id="church" class="markerCheckbox" value="church" style="float: right; margin-right: 7%;"/>
+                        <label for="church" style="float: right;">Crkve</label><br>
+
+                        <input type="checkbox" id="police" class="markerCheckbox" value="police"/>
+                        <label for="police">Policija</label>
+
+                        <input type="checkbox" id="health" class="markerCheckbox" value="health" style="float: right; margin-right: 7%;"/>
+                        <label for="health" style="float: right;">Bolnica</label>
+                            
+                        </br></br>
+
+                        <input type="checkbox" id="pretragaPoOcjenama" onclick="showHideGrades()"/>
+                        <label for="pretragaPoOcjenama" class="grade-icon" >Pretražite po ocjenama
+                            <img src="Pictures/arrowUp.png" class="arrowUpGrade">
+                            <img src="Pictures/arrowDown.png" class="arrowDownGrade" >
+                        </label></br>
+
+                        <div id="grades">
+                            <input type="number" id="pocetnaVrijednost" min="1" max="5" /> do <input type="number" id="zavrsnaVrijednost" min="1" max="5" /> 
+                            </div>
+                            <input type="button" id="searchButton" value="Pretražite" onclick="setFirstSearch(true); hideSearch()" />
+                    </form>
+                </div>
+                
+                <input type="checkbox" name="sortToggle" id="sortToggle" class="sortToggle"/>
+                <label for="sortToggle" class="sort-icon" onclick="showHideSort()">
+                    <span id="listaMjesta" style="position: absolute; bottom: 20px;">Lista mjesta</span>
+                    <img src="Pictures/arrowUp.png" class="arrowUpSort" >
+                    <img src="Pictures/arrowDown.png" class="arrowDownSort">
+                </label>
+                
+                <div id="sortiranje">
+                    <p>Poredajte po:
+                    <form>
+                        <input type="radio" name="sorting" id="sortAlpha" onclick="showPlaces()">Abecedi</br>
+                        <input type="radio" name="sorting" id="sortDistance" onclick="showPlaces()">Udaljenosti</br>
+                        <input type="radio" name="sorting" id="sortGrade" onclick="showPlaces()">Ocjeni</p>
+                    </form>
+                    <div id="places">
+                        
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+
+    </body>
+</html>

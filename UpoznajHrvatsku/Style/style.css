@@ -1,0 +1,1256 @@
+
+/* Clearfix metoda za čišćenje floatanih elemenata */
+.row:before, 
+.row:after{
+    content: " ";
+    display: table;
+}
+
+.row:after{
+    clear: both;
+ }
+
+
+
+/* Redak */
+.row {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+
+body{
+	background: no-repeat left center fixed;
+	background-image: url('../Pictures/cityWithTags.jpg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  font-family: 'Raleway', sans-serif;
+    background-position: center; 
+}
+html, body{
+  height: 95%;
+}
+#location{
+  background: no-repeat left center fixed;
+  background-image: url('../Pictures/city.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+footer{
+  text-align: center;
+  color:white;
+  position: relative;
+  margin-top: 17%;
+  bottom: 20px;
+} 
+
+/*---------------- index.html -------------------*/
+
+#welcome{
+
+	height: 250px;
+	width: 50%;
+	margin-top: 100px;
+	background-color: rgba(255,255,255,0.7);
+  text-align: right;
+  padding: 15px;
+  box-shadow: 5px 5px 25px #888888;
+  font-family: 'Domine', sans-serif;
+}
+
+#loginBttn{
+  background-color: #57676f;
+  color:#ceced4;
+  height: 40px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 10%;
+  transition: all 400ms ease-out;
+}
+#loginBttn:hover{
+  /*background-color: rgba(16,208,221, 0.5);
+  color: #2c393a;
+  */
+  background-color: rgba(0,0,0,0.7);
+  color:white;    
+  cursor: pointer;
+}
+
+
+#locationBttn{
+  background-color: #57676f;
+  color:#ceced4;
+  height: 40px;
+  width: 200px;
+  border: none;
+  border-radius: 4px;
+  float: right;
+  margin-top: 30px;
+  margin-right: 10%;
+  transition: all 400ms ease-out;
+}
+#locationBttn:hover{
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/*------------- login.php --------------*/
+
+#sredina{
+  margin: 0px;
+  max-width: 100%;
+
+}
+
+
+/*-------------Tipka za registraciju--------------*/
+
+
+#registrationButton {
+  float: left;
+  margin-top: 220px;
+  margin-left: 27%;
+  clear: both;
+  height: 150px;
+  width: 240px;
+  border-radius:4px;
+  background-color: rgba(255,255,255,0.9);
+  color:#404040;
+  text-align: center;
+  transition: all 400ms ease-out;
+}
+#registrationButton p {
+  padding-top: 35px;
+  font-size: 22px;
+}
+#registrationButton:hover {
+  background-color: rgba(0,0,0,0.8);
+  color:#ceced4;
+}
+
+/*-------------Tipka za prijavu--------------*/
+
+#loginButton {
+  float: right;
+  margin-right: 27%;
+  margin-top: -150px;
+  clear: both;
+  height: 150px;
+  width: 240px;
+  border-radius:4px;
+  background-color: rgba(255,255,255,0.9);
+  color:#404040;
+  text-align: center;
+  transition: all 400ms ease-out;
+}
+#loginButton p {
+  padding-top: 35px;
+  font-size: 22px;
+}
+#loginButton:hover {
+  background-color: rgba(0,0,0,0.8);
+  color:#ceced4;
+}
+
+/*-------------Forma za registraciju--------------*/
+
+#tijeloRegistracija {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  margin: -8px;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+}
+.registracija {
+  font-size: 20px;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+#registracija {
+  clear:both;
+  height: 350px;
+  width: 430px;
+  background-color: white;
+  border: 1px solid black;
+  margin-top: 200px;
+  margin-left: 33%;
+  border-radius: 5px;
+}
+
+
+.help-block{
+  font-size: 13px;
+  color: #b20900;
+}
+
+.form-group{
+  margin-left: -15px;
+  margin-bottom: 5px;
+}
+.form-control{
+  float: right;
+  margin-right: 15px;
+}
+
+#gumb{
+  background-color: #57676f;
+  color:#ceced4;
+  height: 40px;
+  width: 200px;
+  margin-top: 20px;
+  margin-left: 50px;
+  border: none;
+  border-radius: 4px;
+  transition: all 400ms ease-out;
+  cursor: pointer;
+}
+#gumb:hover{
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+}
+
+
+
+/*-------------Forma za prijavu--------------*/
+
+#tijeloLogin {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: -8px;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+  z-index: 1;
+}
+#iks {
+  position: absolute;
+  float: right;
+  border-radius: 10px;
+  border-style: none;
+  margin-top: -15px;
+  margin-left: 420px;
+  background-color: rgba(0,0,0,0.9);
+  color:white;
+  border-color: rgba(0,0,0,0.9);
+}
+#iks:hover {
+  cursor: pointer;
+}
+#login {
+  clear:both;
+  height: 240px;
+  width: 430px;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 33%;
+  margin-top: 200px;
+  border-radius: 5px;
+
+}
+.podaci {
+  font-size: 20px;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+.login-form{
+  float: right;
+  margin-right: 15px;
+}
+
+.poruka{
+  font-size: 13px;
+  color: #b20900;
+}
+
+#loginGumb{
+  background-color: #57676f;
+  color:#ceced4;
+  height: 40px;
+  width: 200px;
+  margin-left: 50px;
+  border: none;
+  border-radius: 4px;
+  transition: all 400ms ease-out;
+  cursor: pointer;
+}
+#loginGumb:hover{
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+}
+
+
+
+
+
+
+/*------------- location.html --------------*/
+
+#header{
+  background-color: rgba(255,255,255,0.9);
+  width: 94%;
+  margin-left: 3%;
+  height: 30px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+
+}
+#prijava{
+  float: right;
+  margin-right: 50px;
+  margin-top: 5px;
+  color:#404040;
+  height: 20px;
+}
+.toggle{
+  display: none;
+}
+
+.arrowDown{
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-left:50px; 
+  cursor: pointer;
+  display: none;
+}
+.arrowUp{
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-left:50px; 
+  cursor: pointer;
+  display: none;
+}
+
+.menu-icon{
+  display: none;
+}
+
+.toggle:checked  + .menu-icon .arrowUp{
+  display: inline;
+}
+.toggle:checked  + .menu-icon .arrowDown{
+  display: none;
+}
+
+
+.headerButton{
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+  transition: all 400ms ease-out;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 3px 10px 3px 10px;
+}
+
+#middle{
+  position: relative;
+  height: 100%;
+}
+
+#map-canvas{
+  height: 95%;
+  width: 68%;
+  left: 3%;
+  top: 5px;
+  border-radius: 4px;
+}
+
+#search-menu{
+  background-color: rgba(255,255,255,0.9);
+  height: 95%;
+  width: 22%;
+  position: absolute;
+  right: 3%;
+  top: 5px;
+  border-radius: 4px;
+  padding-left: 20px;
+  display: block;
+}
+
+#vrsta{
+  width: 90%;
+  text-align-last: center;
+}
+
+
+#pretragaPoOcjenama{
+  display: none;
+}
+#grades{
+  display: none;
+}
+
+.arrowDownGrade{
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: inline;
+}
+.arrowUpGrade{
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+#pretragaPoOcjenama:checked  + .grade-icon .arrowDownGrade{
+  display: none;
+}
+#pretragaPoOcjenama:checked  + .grade-icon .arrowUpGrade{
+  display: inline;
+}
+
+
+
+
+#pocetnaVrijednost{
+  margin-left: 10%;
+  width: 30%;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid black;
+}
+#zavrsnaVrijednost{
+  width: 30%;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#searchButton{
+  background-color: #57676f;
+  color:#ceced4;
+  height: 40px;
+  width: 75%;
+  margin-top: 30px;
+  margin-left: 10%;
+  border: none;
+  border-radius: 4px;
+  transition: all 400ms ease-out;
+  cursor: pointer;
+}
+#searchButton:hover{
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+}
+#sortiranje{
+  height: 50%;
+}
+
+#places{
+  height: 80%;
+  margin-top: 10px;
+  margin-right: 10px;
+  overflow-y:auto; 
+
+}
+
+#listName{
+  font-size: 18px;
+  cursor:pointer;
+}
+#listAddress{
+  font-size: 15px;
+  cursor:pointer;
+}
+
+.sortToggle{
+  display: none;
+}
+
+.arrowDownSort{
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+.arrowUpSort{
+  position: absolute;
+  float: left;
+  width: 20px;
+  height: 20px;
+  bottom: 20px;
+  margin-left:70%; 
+  cursor: pointer;
+  display: none;
+}
+
+.sort-icon{
+  display: none;
+}
+
+.sortToggle:checked  + .sort-icon .arrowUpSort{
+  display: none;
+}
+.sortToggle:checked  + .sort-icon .arrowDownSort{
+  display: inline;
+}
+
+
+/*-------------Opis markera--------------*/
+
+#opis{
+  width: 90%;
+}
+.arrow-up {
+  bottom: 20px;
+  left: 46%;
+  position: relative;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  
+  border-bottom: 20px solid white;
+}
+
+
+#mobile-info{
+  padding-left: 5px;
+  position: absolute;
+  background-color: white;
+  width: 96.5%;
+  height: 300px;
+  float: left;
+  display: none;
+  bottom: -36px;
+  left: -10px;
+}
+#closeInfo {
+  position: absolute;
+  float: right;
+  border-radius: 10px;
+  border-style: none;
+  margin-left: 78%;
+  margin-top: -270px;
+  background-color: rgba(0,0,0,0.9);
+  color:white;
+  border-color: rgba(0,0,0,0.9);
+}
+#closeInfo:hover {
+  cursor: pointer;
+}
+
+
+
+#labela{
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  height: 30px;
+}
+#rezultat{
+  float: right;
+  margin-right: 15px;
+}
+#recenzija{
+  width: 280px;
+}
+#ocjena{
+  width: 50px;
+  text-align-last: center;
+  margin-left: 15px;
+}
+
+#save-marker{
+  background-color: #57676f;
+  color:#ceced4;
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 4px;
+  transition: all 400ms ease-out;
+  cursor: pointer;
+}
+#save-marker:hover{
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+}
+#showComments{
+  float: right;
+  margin-right: 15px;
+  background-color: #57676f;
+  color:#ceced4;
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 4px;
+  transition: all 400ms ease-out;
+  cursor: pointer;
+}
+#showComments:hover{
+  background-color: rgba(0,0,0,0.7);
+  color:white;
+}
+
+
+/*-------------Lista recenzija--------------*/
+
+
+#tijeloRecenzije {
+  position: fixed;
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  margin-left: -10px;
+  margin-top: -50px;
+  padding-bottom: 95px;
+  padding-right: 18px;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+}
+
+#recenzije {
+  clear:both;
+  height: 240px;
+  width: 430px;
+  background-color: white;
+  border: 1px solid black;
+  margin-left: 33%;
+  margin-top: 200px;
+  border-radius: 5px;
+  overflow-y:auto; 
+}
+
+#sakrijRecenziju {
+  position: fixed;
+  float: right;
+  border-radius: 10px;
+  border-style: none;
+  margin-top: -15px;
+  margin-left: 420px;
+  background-color: rgba(0,0,0,0.9);
+  color:white;
+  border-color: rgba(0,0,0,0.9);
+}
+#sakrijRecenziju:hover {
+  cursor: pointer;
+}
+
+#recenzijaKorisnik{
+  position: relative;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+#datumKomentiranja{
+  float: right;
+  margin-top: 10px;
+  margin-right: 20px;
+  color: #636363;
+  font-size: 11px;
+}
+#ocjenaKorisnika{
+  margin-top: 3px;
+  margin-left: 5px;
+  height:35px;
+  width:125px
+}
+#komentarKorisnika{
+  margin-left: 15px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------Responzivan dizajn------------*/
+
+@media screen and (max-width: 1100px) {
+  /*------------login.html------------*/
+  #registrationButton{
+    margin-top: 150px;
+    margin-left: 40%;
+  }
+  #loginButton{
+    float: left;
+    margin-top: 20px;
+    margin-left: 40%;
+  }
+  footer{
+    margin-top: 10%;
+  }
+
+#pocetnaVrijednost{
+  margin-left: 5%;
+  width: 28%;
+}
+#zavrsnaVrijednost{
+  width: 28%;
+}
+
+}  
+
+@media screen and (max-width: 1024px) {
+  /*------------index.html------------*/
+  #welcome{
+    height: 70%;
+    margin-top: 50px;
+  }
+  #loginBttn{
+    margin-left: 33%;
+  }
+  #locationBttn{
+    float: left;
+    margin-left: 33%;
+  }
+
+
+  .arrowDownGrade{
+    margin-right: 10px;
+  }
+  .arrowUpGrade{
+    margin-right: 10px;
+}
+
+}
+
+
+
+@media screen and (max-width: 900px) {
+  /*------------index.html------------*/
+  #welcome{
+    width: 60%;
+    height: 400px;
+    margin-top: 40px;
+  }
+  #loginBttn{
+    margin-left: 30%;
+    width: 44%;
+    height: 70px;
+    font-size: 15px;
+  }
+  #locationBttn{
+    margin-left: 30%;
+    width: 44%;
+    height: 70px;
+    font-size: 15px;
+  }
+
+ /*------------Forma za registraciju i prijavu------------*/
+  #registracija, #login {
+    margin-left: 30%;
+  }
+  .form-control{
+    width: 50%;
+  }
+
+
+
+
+
+
+  /*------------location.html------------*/
+
+  #map-canvas{
+    width: 94%;
+    left: 3%;
+  }
+
+  #search-menu{
+    background-color: white;
+    width: 35%;
+    right: 3%;
+    display: none;
+
+  }
+  .menu-icon{
+    display: inline;
+  }
+  .arrowDown{
+    display: inline;
+  }
+
+
+  #recenzije {
+    margin-left: 29%;
+  }
+  
+
+
+}
+
+
+
+@media screen and (max-width: 800px) {
+  /*------------index.html------------*/
+  #welcome{
+    width: 80%;
+    height: 80%;
+    font-size: 19px;
+    margin-top: 20px;
+
+  }
+  #loginBttn{
+    margin-left: 25%;
+    width: 50%;
+    height: 70px;
+    font-size: 17px;
+  }
+  #locationBttn{
+    margin-left: 25%;
+    width: 50%;
+    height: 70px;
+    font-size: 17px;
+  }
+  footer{
+    font-size: 17px;
+    margin-top: 15%;
+  }
+
+  /*------------login.html------------*/
+  #registrationButton{
+    margin-left: 35%;
+  }
+  #loginButton{
+    margin-left: 35%;
+  }
+   /*------------Forma za registraciju------------*/
+  #registracija, #login {
+    margin-left: 20%;
+  }
+  .form-control{
+    width: 50%;
+  }
+
+
+  #recenzije {
+    margin-left: 25%;
+  }
+
+
+}
+
+@media screen and (max-width: 600px) {
+  /*------------index.html------------*/
+  #welcome{
+    font-size: 21px;
+
+  }
+  #loginBttn{
+    margin-left: 15%;
+    width: 70%;
+    height: 15%;
+    font-size: 19px;
+  }
+  #locationBttn{
+    margin-left: 15%;
+    width: 70%;
+    height: 15%;
+    font-size: 19px;
+  }
+    /*------------login.html------------*/
+  #registrationButton{
+    margin-left: 30%;
+  }
+  #loginButton{
+    margin-left: 30%;
+  }
+  /*------------Forma za registraciju------------*/
+  #registracija, #login {
+    margin-left: 10%;
+    margin-top: 150px;
+  }
+
+
+   /*------------location.html------------*/
+
+
+  #search-menu{
+    width: 45%;
+
+  }
+
+
+  #recenzije {
+    margin-left: 11%;
+  }
+
+
+}
+
+  @media screen and (max-width: 500px) {
+  /*------------index.html------------*/
+  #welcome{
+    font-size: 18px;
+
+  }
+  #loginBttn{
+    font-size: 16px;
+    white-space: normal;
+  }
+  #locationBttn{
+    font-size: 16px;
+    white-space: normal;
+  }
+  /*------------login.html------------*/
+  #registrationButton{
+    margin-left: 20%;
+  }
+  #loginButton{
+    margin-left: 20%;
+  }
+  /*------------Forma za registraciju------------*/
+  #registracija, #login {
+    width: 85%;
+  }
+  .registracija , .podaci{
+    padding-top: 40px;
+    padding-left: 20px;
+    font-size: 17px;
+  }
+  #iks{
+    margin-left: 79%
+  }
+  #gumb, #loginGumb{
+    margin-left: 10%;
+  }
+
+
+/*------------location.html------------*/
+  #recenzije {
+    margin-top: 150px;
+    margin-left: 5%;
+    height: 400px;
+    width: 92%;
+  }
+  #sakrijRecenziju{
+    margin-left: 84%;
+  }
+
+
+}
+
+@media screen and (max-width: 450px) {
+  #welcome{
+    height: 90%;
+  }
+
+   /*------------location.html------------*/
+
+
+  #search-menu{
+    width: 65%;
+
+  }
+  #mobile-info{
+    padding-left:8%;
+  }
+
+
+
+}
+
+
+
+@media screen and (max-width: 420px) {
+  /*------------index.html------------*/
+  #welcome{
+    font-size: 18px;
+
+    margin-top: 10px;
+
+  }
+  #loginBttn{
+    font-size: 14px;
+  }
+  #locationBttn{
+    font-size: 14px;
+  }
+  /*------------login.html------------*/
+  #registrationButton{
+    margin-left: 17%;
+  }
+  #loginButton{
+    margin-left: 17%;
+  }
+
+  /*------------location.html------------*/
+    #prijava{
+    font-size: 14px;
+    margin-right: 20px;
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+  /*------------index.html------------*/
+  #welcome{
+    width: 80%;
+    font-size: 18px;
+
+  }
+  #loginBttn{
+    margin-top: -30px;
+    height: 20%;
+    white-space: normal;
+  }
+  #locationBttn{
+    height: 20%;
+    white-space: normal;
+  }
+    /*------------login.html------------*/
+  #registrationButton{
+    margin-left: 15%;
+  }
+  #loginButton{
+    margin-left: 15%;
+  }
+
+  /*------------Forma za registraciju------------*/
+  #registracija, #login {
+    width: 95%;
+    margin-left: 2%;
+  }
+  .podaci{
+    padding-left: 15px;
+    font-size: 16px;
+  }
+  #iks{
+    margin-left: 90%
+  }
+  #gumb, #loginGumb{
+    margin-left: 10%;
+  }
+
+   /*------------location.html------------*/
+   #search-menu{
+    width: 75%;
+   }
+
+  #prijava{
+    font-size: 12px;
+    margin-right: 20px;
+  }
+
+  #mobile-info{
+    padding-left:9%;
+    font-size: 15px;
+  }
+  #recenzija{
+    width: 250px;
+  }
+
+
+}
+@media screen and (max-height: 900px){
+  #places{
+    height: 78%;
+  }
+}
+@media screen and (max-height: 800px){
+  #places{
+    height: 63%;
+  }
+}
+
+@media screen and (max-height: 700px){
+  #places{
+    height: 55%;
+  }
+}
+@media screen and (max-height: 640px){
+  #places{
+    height: 50%;
+  }
+}
+@media screen and (max-height: 600px){
+
+  /*------------index.html------------*/
+  #loginBttn{
+    margin-top: -30px;
+  }
+    /*------------login.html------------*/
+  #registrationButton{
+    margin-top: 20%;
+  }
+  /*------------Forma za registraciju------------*/
+  #registracija, #login {
+    margin-top: 20%;
+  }
+
+  #tijeloRecenzije {
+    margin-top: -100px;
+  }
+  #places{
+    height: 70%;
+  }
+
+  #sortiranje{
+    display: none;
+    height: 90%;
+  }
+
+  .sort-icon{
+    display: inline;
+  }
+  .arrowUpSort{
+    display: inline;
+  }
+
+
+}
+
+@media screen and (max-height: 500px){
+  /*------------index.html------------*/
+  #welcome{
+    font-size: 18px;
+    height: 93%;
+
+  }
+  #loginBttn{
+    margin-top: -50px;
+  }
+  #locationBttn{
+    margin-top: 10px;
+  }
+
+  /*------------login.html------------*/
+  #registrationButton{
+    margin-top: 15%;
+  }
+
+  /*------------Forma za registraciju------------*/
+  #registracija, #login {
+    margin-top: 10%;
+  }
+
+  /*------------location.html------------*/
+  #middle{
+    height: 95%;
+  }
+  #map-canvas{
+    height: 93%;
+  }
+  #search-menu{
+    height: 93%;
+  }
+  #tijeloRecenzije {
+    margin-top: -140px;
+  }
+  #recenzije{
+    height: 300px;
+  }
+
+  #places{
+    height: 60%;
+  }
+  
+}
+@media screen and (max-height: 420px){
+  /*------------index.html------------*/
+    #welcome{
+    font-size: 16px;
+    height: 93%;
+
+  }
+    #loginBttn{
+    margin-top: -40px;
+    height: 20%;
+  }
+  #locationBttn{
+    height: 20%;
+    margin-top: 10px;
+  }
+
+  /*------------login.html------------*/
+  #registrationButton{
+    margin-top: 12%;
+    height: 40%;
+  }
+  #registrationButton p{
+    padding-top: 0px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }  
+  #loginButton{
+    height: 40%;
+  }
+  #loginButton p{
+    padding-top: 0px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }    
+  /*------------Forma za registraciju------------*/
+  #registracija, #login {
+    margin-top: 3%;
+  }
+  #recenzije {
+    margin-top: 120px;
+  }
+  #places{
+    height: 50%;
+  }
+
+
+
+}
+
+@media screen and (max-height: 350px){
+  /*------------index.html------------*/
+  #welcome{
+    font-size: 15px;
+    height: 90%;
+  }
+  /*------------login.html------------*/
+  #registrationButton{
+    margin-top: 5%;
+  }
+    /*------------Forma za registraciju------------*/
+  #registracija, #login {
+    margin-top: 0px;
+  }
+
+  /*------------location.html------------*/
+  #middle{
+    height: 90%;
+  }
+  #search-menu{
+    font-size: 12px;
+  }
+  #searchButton{
+    margin-top: -5px;
+  }
+    #recenzije {
+      height: 200px;
+  }
+
+   #places{
+    height: 45%;
+  }
+
+}
